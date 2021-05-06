@@ -1,0 +1,10 @@
+name: py38Pcoiled
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - coiled=0.0.39.1
+  - dask=2021.4.1
+  - dask-ml=1.9.0
+  - scikit-learn=0.24.2
+  - scipy=1.6.3
