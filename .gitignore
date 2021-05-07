@@ -134,3 +134,7 @@ dask-worker-space/
 
 # Mac DS_Store
 .DS_Store
+
+.vscode
+
+*.pyc
