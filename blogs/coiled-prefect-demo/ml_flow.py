@@ -61,4 +61,20 @@ with Flow("ml-flow") as flow:
     df = create_features(df)
     train_model(df)
 
-flow.run()
+
+if __name__ == "__main__":
+    from prefect.executors import DaskExecutor
+    import coiled
+    executor = DaskExecutor(
+    cluster_class=coiled.Cluster,
+    cluster_kwargs={
+        "software": "grybox/py38pcoiled",
+        "shutdown_on_close": False,
+        "name": "prefect-play",
+        },
+    )
+
+
+    flow.run(
+        executor=executor
+    )
