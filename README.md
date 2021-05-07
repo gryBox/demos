@@ -1,2 +1,1 @@
-# demos
-Collection of code snippets for blogs, conferences, and talks
+Collection of code for presentations and blog posts.
